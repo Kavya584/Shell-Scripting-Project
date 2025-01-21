@@ -106,12 +106,13 @@ case $aws_service in
         echo "Listing DynamoDB Tables in $aws_region"
         aws dynamodb list-tables --region $aws_region
         ;;
-    ebs)
-        echo "Listing EBS Volumes in $aws_region"
-        aws ec2 describe-volumes --region $aws_region
-        ;;
+    # ebs)
+    #     echo "Listing EBS Volumes in $aws_region"
+    #     aws ec2 describe-volumes --region $aws_region
+    #     ;;
     *)
         echo "Invalid service. Please enter a valid service."
         exit 1
         ;;
 esac
+#This is the entire automation shell scripting
